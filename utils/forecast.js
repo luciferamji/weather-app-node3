@@ -12,11 +12,13 @@ const forecast=(latitude,longitude,callback)=>
         else if(body.error)
         callback("unable to find location",undefined)
         else
-        {callback(undefined,{
+        {   
+            callback(undefined,{
             summary:body.daily.data[0].summary ,
              temperature: body.currently.temperature,
-            percentage:body.currently.precipProbability*100
-        
+            percentage:body.daily.data[0].precipProbability*100,
+            hightemp:body.daily.data[0].temperatureHigh,
+            lowtemp:body.daily.data[0].temperatureLow
         })
         }
      })

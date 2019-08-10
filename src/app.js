@@ -73,7 +73,9 @@ app.get('/weather', (req, res) => {
              location:data.location,
              summary:forecastdata.summary,
              temperature:forecastdata.temperature,
-             percentage:forecastdata.percentage
+             percentage:forecastdata.percentage,
+             hightemp:forecastdata.hightemp,
+             lowtemp:forecastdata.lowtemp
            })
             
         })
