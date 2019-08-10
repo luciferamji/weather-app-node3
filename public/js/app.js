@@ -15,7 +15,7 @@ formdata.addEventListener('submit',(e)=>{
  m4.textContent=""
  m5.textContent=""
 
-const url='http://localhost:3000/weather?address='+encodeURI(input.value)
+const url='/weather?address='+encodeURI(input.value)
 fetch(url).then((response)=>{
     response.json().then((data)=>{
     if(data.error)
